@@ -33,6 +33,7 @@ public class PostsServiceImpl implements PostsService{
 	 * @return ist<Posts>
 	 * @throws IOException
 	 */
+	@Override
 	public List<Posts> findAllPosts() throws IOException{
 		return Arrays.stream(restTemplate.getForObject(postsResourceUrl, Posts[].class)).collect(Collectors.toList());
 	}

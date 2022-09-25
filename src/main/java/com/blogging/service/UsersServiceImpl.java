@@ -32,6 +32,8 @@ public class UsersServiceImpl implements UserService{
 	 * @return
 	 * @throws IOException
 	 */
+	
+	@Override
 	public List<Users> findAllUsers() throws IOException{
 
 		return Arrays.stream(restTemplate.getForObject(usersResourceUrl, Users[].class)).collect(Collectors.toList());
